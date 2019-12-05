@@ -10,14 +10,14 @@
 <div class="wrapper">
 
   <?php
-    include 'header.php';
+    include 'template/header.php';
   ?>
 
   <!-- =============================================== -->
 
   <!-- Left side column. contains the sidebar -->
   <?php
-  include 'sidebar.php';
+  include 'template/sidebar.php';
   ?>
   <!-- =============================================== -->
 
@@ -69,19 +69,19 @@
   <!-- /.content-wrapper -->
 
   <?php
-    include 'footer.php';
+    include 'template/footer.php';
   ?>
 
   <!-- Control Sidebar -->
   <?php
-  include 'controlSidebar.php';
+  include 'template/controlSidebar.php';
   ?>
 </div>
 <!-- ./wrapper -->
 
 <!-- jQuery 3 -->
   <?php
-    include 'jquery.php';
+    include 'template/jquery.php';
   ?>
 </body>
 </html>
