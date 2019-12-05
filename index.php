@@ -27,7 +27,7 @@
     <section class="content-header">
       <h1>
         Belajar GIT
-        <small>it all starts here</small>
+        <small>it all starts here dude</small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
