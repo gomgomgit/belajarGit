@@ -53,7 +53,7 @@
           </div>
         </div>
         <div class="box-body">
-          Start creating your amazing application!
+          Start creating your amazing application! I hope so!
         </div>
         <!-- /.box-body -->
         <div class="box-footer">
