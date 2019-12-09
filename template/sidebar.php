@@ -4,7 +4,7 @@
       <!-- Sidebar user panel -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="template/AdminLTE2/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+          <img src="../template/AdminLTE2/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
           <p>Alexander Pierce</p>
@@ -38,15 +38,15 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="template/AdminLTE2/index.html"><i class="fa fa-plus"></i> Tambah Post</a></li>
-            <li><a href="template/AdminLTE2/index2.html"><i class="fa fa-bars"></i> Beranda Post</a></li>
+            <li><a href="../template/AdminLTE2/index.html"><i class="fa fa-plus"></i> Tambah Post</a></li>
+            <li><a href="../template/AdminLTE2/index2.html"><i class="fa fa-bars"></i> Beranda Post</a></li>
           </ul>
         </li>
       </ul>
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header"><i class="glyphicon glyphicon-cog"></i> <span>SETTINGS</span></li>
         <li>
-          <a href="user.php">
+          <a href="../user/index.php">
             <i class="glyphicon glyphicon-user"></i> <span>USER</span>
           </a>
         </li>
