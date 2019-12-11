@@ -26,8 +26,8 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        USER
-        <small>User Management</small>
+        POST
+        <small>Beranda Post</small>
       </h1>
       <ol class="breadcrumb">
         <li class="active"><i class="fa fa-home"></i> Home</li>
@@ -147,8 +147,8 @@
   <?php
     include '../template/jquery.php';
   ?>
- <script type="text/javascript">
-        $('#useractive').addClass('active');
+<script type="text/javascript">
+        $('#postactive').addClass('active');
 </script>
 </body>
 </html>

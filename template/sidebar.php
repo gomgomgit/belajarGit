@@ -25,12 +25,12 @@
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">MENU</li>
-        <li class="active">
-          <a href="#">
+        <li id="homeactive">
+          <a href="../home/index.php">
             <i class="glyphicon glyphicon-home"></i> <span>HOME</span>
           </a>
         </li>
-        <li class="treeview">
+        <li id="postactive" class="treeview">
           <a href="#">
             <i class="glyphicon glyphicon-book"></i> <span>POST</span>
             <span class="pull-right-container">
@@ -38,14 +38,14 @@
             </span>
           </a>
           <ul class="treeview-menu">
+            <li><a href="../post/berandapost.php"><i class="fa fa-bars"></i> Beranda Post</a></li>
             <li><a href="../template/AdminLTE2/index.html"><i class="fa fa-plus"></i> Tambah Post</a></li>
-            <li><a href="../template/AdminLTE2/index2.html"><i class="fa fa-bars"></i> Beranda Post</a></li>
           </ul>
         </li>
       </ul>
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header"><i class="glyphicon glyphicon-cog"></i> <span>SETTINGS</span></li>
-        <li>
+        <li id="useractive">
           <a href="../user/index.php">
             <i class="glyphicon glyphicon-user"></i> <span>USER</span>
           </a>
@@ -54,3 +54,4 @@
     </section>
     <!-- /.sidebar -->
   </aside>
+
