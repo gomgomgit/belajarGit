@@ -82,9 +82,7 @@
     include '../template/jquery.php';
   ?>
 <script type="text/javascript">
-
-        $('#homeactive').addClass('active');
-
+      $('#homeactive').addClass('active');
 </script>
 </body>
 </html>

@@ -14,11 +14,3 @@
     $('.sidebar-menu').tree()
   })
 </script>
-  <script type="text/javascript">
-
-      $('.homeactive').click(function() {
-        $('#homeactive').addClass('active');
-
-      });
-
-  </script>

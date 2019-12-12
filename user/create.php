@@ -26,12 +26,13 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        <i class="fa fa-users"></i> USER
-        <small>User Management</small>
+        ADD USER
+        <small>Add User Account</small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="../home/index.php"><i class="fa fa-home"></i> Home</a></li>
-        <li class="active"><i class="glyphicon glyphicon-user"></i> User</li>
+        <li><a href="index.php"><i class="glyphicon glyphicon-user"></i> User</a></li>
+        <li class="active"><i class="fa fa-plus-circle"></i> Add User</li>
       </ol>
     </section>
 
@@ -57,54 +58,45 @@
         <!-- /.box-body -->
         <div class="box">
             <div class="box-header with-border">
-              <a href="create.php" class="btn btn-sm btn-primary"><i class="fa fa-user-plus"></i> Add User</a>
+              <h3>Add Account User</h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
-              <table class="table table-bordered">
-                <tr>
-                  <th style="width: 10px">No</th>
-                  <th>Name</th>
-                  <th>Email</th>
-                </tr>
-                <?php
+              <form role="form" method="post" action="add_process.php">
+              <div class="box-body">
+              	<div class="form-group">
+                  <label for="name">Nama</label>
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Enter Name">
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" name="email" class="form-control" id="email" placeholder="Enter Email">
+                </div>
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input type="password" name="password" class="form-control" id="password" placeholder="Enter Password">
+                </div>
+                <!-- <div class="form-group">
+                  <label for="exampleInputFile">File input</label>
+                  <input type="file" id="exampleInputFile">
 
-                  include '../connect/connect.php';
-                  $number = 1;
-                  $sql    = "SELECT * FROM user";
-                  $result = mysqli_query($connect, $sql);
+                  <p class="help-block">Example block-level help text here.</p>
+                </div> -->
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox"> Check me out
+                  </label>
+                </div>
+              </div>
+              <!-- /.box-body -->
 
-                  if (mysqli_num_rows($result)>0 ) {
-                    while ($row = mysqli_fetch_assoc($result)) {
-                ?>
-
-                <tr>
-                  <td><?= $number++ ."." ?></td>
-                  <td><?= $row['name'] ?></td>
-                  <td><?= $row['email'] ?></td>
-                  <td>
-                    <a href="edit.php?id=<?= $row['id'] ?>" class="btn btn-sm btn-warning"><i class="fa fa-edit"></i> Edit </a>
-                    <a href="delete.php?id=<?= $row['id'] ?>" class="btn btn-sm btn-danger"><i class="fa fa-trash-o"></i> Delete </a>
-                  </td>
-                </tr>
-
-                <?php
-                    }
-                  }
-
-                ?>
-              </table>
+              <div class="box-footer">
+              	<a href="index.php" class="btn btn-warning"><i class="fa fa-arrow-left"></i> Back</a>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+            </form>
             </div>
             <!-- /.box-body -->
-            <div class="box-footer clearfix">
-              <ul class="pagination pagination-sm no-margin pull-right">
-                <li><a href="#">&laquo;</a></li>
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">&raquo;</a></li>
-              </ul>
-            </div>
           </div>
         <div class="box-footer">
           Footer
