@@ -26,6 +26,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
+        <i class="glyphicon glyphicon-home"></i>
         Belajar GIT
         <small>it all starts here dude</small>
       </h1>

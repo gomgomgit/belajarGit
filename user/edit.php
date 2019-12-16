@@ -26,7 +26,8 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        ADD USER
+        <i class="glyphicon glyphicon-pencil"></i>
+        EDIT USER
         <small>Add User Account</small>
       </h1>
       <ol class="breadcrumb">
@@ -58,7 +59,7 @@
         <!-- /.box-body -->
         <div class="box">
             <div class="box-header with-border">
-              <h3>Login Account User</h3>
+              <h3>Edit Account User</h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">

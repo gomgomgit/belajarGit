@@ -30,7 +30,7 @@
         <small>User Management</small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="../home/index.php"><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="http://localhost/menu/git/belajarGit/home/index.php"><i class="fa fa-home"></i> Home</a></li>
         <li class="active"><i class="glyphicon glyphicon-user"></i> User</li>
       </ol>
     </section>
