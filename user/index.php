@@ -84,7 +84,7 @@
                   <td><?= $row['email'] ?></td>
                   <td>
                     <a href="edit.php?id=<?= $row['id'] ?>" class="btn btn-sm btn-warning"><i class="fa fa-edit"></i> Edit </a>
-                    <a href="delete.php?id=<?= $row['id'] ?>" class="btn btn-sm btn-danger"><i class="fa fa-trash-o"></i> Delete </a>
+                    <a href="delete.php?id=<?= $row['id'] ?>" class="btn btn-sm btn-danger" onclick="javascript:return confirm('Are you sure?')"><i class="fa fa-trash-o"></i> Delete </a>
                   </td>
                 </tr>
 

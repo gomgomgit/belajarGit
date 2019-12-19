@@ -38,8 +38,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="http://localhost/menu/git/belajarGit/post/berandapost.php"><i class="fa fa-bars"></i> Beranda Post</a></li>
-            <li><a href="../template/AdminLTE2/index.html"><i class="fa fa-plus"></i> Tambah Post</a></li>
+            <li><a href="http://localhost/menu/git/belajarGit/post/index.php"><i class="fa fa-bars"></i> Beranda Post</a></li>
+            <li><a href="http://localhost/menu/git/belajarGit/post/add.php"><i class="fa fa-plus"></i> Tambah Post</a></li>
           </ul>
         </li>
       </ul>

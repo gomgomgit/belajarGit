@@ -26,8 +26,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        <i class="glyphicon glyphicon-pencil"></i>
-        EDIT USER
+        ADD USER
         <small>Add User Account</small>
       </h1>
       <ol class="breadcrumb">
@@ -59,34 +58,35 @@
         <!-- /.box-body -->
         <div class="box">
             <div class="box-header with-border">
-              <h3>Edit Account User</h3>
+              <h3>Add Post</h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
-              <form role="form" method="post" action="edit_process.php">
-                <?php
-
-                  include '../connect/connect.php';
-                  $id     = $_GET['id'];
-                  $sql    = "SELECT * FROM user WHERE id =".$id;
-                  $result = mysqli_query($connect, $sql);
-
-                  $row = mysqli_fetch_assoc($result);
-
-                ?>
+              <form role="form" method="post" action="add_process.php">
               <div class="box-body">
-                <input type="hidden" name="id" value="<?= $id ?>">
               	<div class="form-group">
-                  <label for="name">Nama</label>
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Enter Name" value="<?= $row['name'] ?>" />
+                  <label for="author">Author</label>
+                  <input type="text" name="author" class="form-control" id="author" placeholder="Enter Author Name">
                 </div>
                 <div class="form-group">
-                  <label for="email">Email</label>
-                  <input type="email" name="email" class="form-control" id="email" placeholder="Enter Email" value="<?= $row['email'] ?>" />
+                  <label for="title">Title</label>
+                  <input type="text" name="title" class="form-control" id="title" placeholder="Enter Title">
                 </div>
                 <div class="form-group">
-                  <label for="password">Password</label>
-                  <input type="password" name="password" class="form-control" id="password" placeholder="Enter Password" />
+                  <label for="content">Content</label>
+                  <textarea name="content" class="form-control" id="content" placeholder="Enter Content"></textarea> 
+                </div>
+                <div class="form-group">
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="status" id="optionsRadios1" value=1 checked>
+                      Publish
+                    </label>
+                    <label>
+                      <input type="radio" name="status" id="optionsRadios2" value=0 >
+                      Draft
+                    </label>
+                  </div>
                 </div>
                 <!-- <div class="form-group">
                   <label for="exampleInputFile">File input</label>
@@ -139,6 +139,7 @@
   ?>
  <script type="text/javascript">
         $('#useractive').addClass('active');
+        $('#postactive').addClass('active');
 </script>
 </body>
 </html>

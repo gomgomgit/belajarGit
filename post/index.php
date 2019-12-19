@@ -56,57 +56,46 @@
         <!-- /.box-body -->
         <div class="box">
             <div class="box-header with-border">
-              <h3 class="box-title">Bordered Table</h3>
+              <a href="add.php" class="btn btn-sm btn-primary"><i class="fa fa-user-plus"></i> Add Post</a>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
               <table class="table table-bordered">
                 <tr>
-                  <th style="width: 10px">#</th>
-                  <th>Task</th>
-                  <th>Progress</th>
-                  <th style="width: 40px">Label</th>
+                  <th style="width: 10px">No</th>
+                  <th>Author</th>
+                  <th>Title</th>
+                  <th>Content</th>
+                  <th>Status</th>
                 </tr>
+                <?php
+
+                  include '../connect/connect.php';
+                  $number = 1;
+                  $sql    = "SELECT * FROM post";
+                  $result = mysqli_query($connect, $sql);
+
+                  if (mysqli_num_rows($result)>0 ) {
+                    while ($row = mysqli_fetch_assoc($result)) {
+                ?>
+
                 <tr>
-                  <td>1.</td>
-                  <td>Update software</td>
+                  <td><?= $number++ ."." ?></td>
+                  <td><?= $row['author'] ?></td>
+                  <td><?= $row['title'] ?></td>
+                  <td><?= $row['content'] ?></td>
+                  <td><?= $row['status']?"Publish":"Draft" ?></td>
                   <td>
-                    <div class="progress progress-xs">
-                      <div class="progress-bar progress-bar-danger" style="width: 55%"></div>
-                    </div>
+                    <a href="edit.php?id=<?= $row['id'] ?>" class="btn btn-sm btn-warning"><i class="fa fa-edit"></i> Edit </a>
+                    <a href="delete.php?id=<?= $row['id'] ?>" class="btn btn-sm btn-danger" onclick="javascript:return confirm('Are you sure?')"><i class="fa fa-trash-o"></i> Delete </a>
                   </td>
-                  <td><span class="badge bg-red">55%</span></td>
                 </tr>
-                <tr>
-                  <td>2.</td>
-                  <td>Clean database</td>
-                  <td>
-                    <div class="progress progress-xs">
-                      <div class="progress-bar progress-bar-yellow" style="width: 70%"></div>
-                    </div>
-                  </td>
-                  <td><span class="badge bg-yellow">70%</span></td>
-                </tr>
-                <tr>
-                  <td>3.</td>
-                  <td>Cron job running</td>
-                  <td>
-                    <div class="progress progress-xs progress-striped active">
-                      <div class="progress-bar progress-bar-primary" style="width: 30%"></div>
-                    </div>
-                  </td>
-                  <td><span class="badge bg-light-blue">30%</span></td>
-                </tr>
-                <tr>
-                  <td>4.</td>
-                  <td>Fix and squish bugs</td>
-                  <td>
-                    <div class="progress progress-xs progress-striped active">
-                      <div class="progress-bar progress-bar-success" style="width: 90%"></div>
-                    </div>
-                  </td>
-                  <td><span class="badge bg-green">90%</span></td>
-                </tr>
+
+                <?php
+                    }
+                  }
+
+                ?>
               </table>
             </div>
             <!-- /.box-body -->
